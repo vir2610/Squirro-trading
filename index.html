@@ -21,14 +21,38 @@
 	<link href="css/smart_tab_vertical.css" rel="stylesheet" type="text/css"/>
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.smartTab.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer type="text/javascript"></script>
+	<script type="text/javascript" src="js/vueTemplate.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 		$("#tabs").smartTab({autoProgress: false,stopOnFocus:true,transitionEffect:'vSlide'});
+		var app = new Vue({
+			el: '#App',
+			data: {
+				message: 'Hello Vue!',
+				currentSlide : {url: "../images/SQ_T_Images/1st.jpg", text: "Hie"},
+				slideCounter : 0,
+				bgc : {"background": 'url("images/SQ_T_Images/1st.jpg")'},
+				items: [
+					{url: "images/SQ_T_Images/1st.jpg", text: "Hie"},
+					{url: "images/SQ_T_Images/2nd.jpeg", text: "Hie"},
+					{url: "images/SQ_T_Images/3rd.jpeg", text: "Hie"},
+					{url: "images/SQ_T_Images/4th.jpeg", text: "Hie"},
+				]
+			},
+			methods : {
+				changeImage : function()
+				{
+					this.currentSlide = this.slider[this.slideCounter];
+					  this.slideCounter++;
+				}
+			}
+		})
 	});
 </script>
 </head>
 
-<body class="homepage">
+<body class="homepage" >
 	<div id="preloader">
 		<div id="status">
 			<img src="images/loader.gif" height="60" width="60" alt="">
@@ -71,31 +95,39 @@
 		</div> <!-- /header-inner -->
 	</header>
 	<!-- squirro -->
-	<section id="squirro">
+	<div id="App"> 
+	<section id="squirro" class="imageClassTS">
 		<div class="row squirro-content">
 			<div class="twelve columns flex-container">
 				<div id="squirro-slider" class="flexslider">
 					<ul class="slides">
 						<!-- Slide -->
-						<li>
+						<!-- <li v-for="item in items" class="imageClassTS">
+							<div class="flex-caption">
+								 <img :src="item.url" />
+							</div>
+					    </li> -->
+					    
+					   <li >
 							<div class="flex-caption">
 								<h1>Hello, we are Squirro. We delivers awesome deals and eminent quality</h1>
 								<p><a class="button stroke smoothscroll" href="#about">More about us</a></p>
 							</div>
 						</li>
-						<!-- Slide -->
 						<li>
 							<div class="flex-caption">
 								<h1 >We exist to deliver best of it to the WORLD.</h1>
 								<p><a class="button stroke smoothscroll" href="#products">See our products</a></p>
 							</div>
-						</li>
+						</li> 
+    
 						<!-- Slide -->
 					</ul>
 				</div> <!-- .flexslider -->
 			</div> <!-- .flex-container -->
 		</div> <!-- .squirro-content -->
 	</section> <!-- #squirro -->
+	</div>
 
 	<section id="products">
 		<div class="row section-head">

@@ -160,6 +160,8 @@
 	   	namespace: "flex-",
 	      controlsContainer: ".flex-container",
 	      animation: 'fade',
+	      itemWidth: '100%',
+	      itemHeight: 'auto',
 	      controlNav: true,
 	      directionNav: false,
 	      smoothHeight: true,
