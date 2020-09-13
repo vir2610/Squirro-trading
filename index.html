@@ -50,6 +50,19 @@
 		})
 	});
 </script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+	<script type="text/javascript">
+	function sendEmail() {
+		var contactEmail = $("#contactEmail").val();
+		Email.send({
+		SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+		To : 'inquiry@marvelventures.co.in',
+		From : contactEmail,
+		Subject : "This is the subject",
+		Body : "This is the body"
+	}).then(
+		message => alert(message));
+	});
 </head>
 
 <body class="homepage" >
@@ -378,20 +391,7 @@
 	$(function(){
 		$("#spices").load("spices.html"); 
 	});
-	</script> 
-	<script src="https://smtpjs.com/v3/smtp.js"></script>  
-	<script type="text/javascript">
-	function sendEmail() {
-		var contactEmail = $("#contactEmail").val();
-		Email.send({
-		SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
-		To : 'inquiry@marvelventures.co.in',
-		From : contactEmail,
-		Subject : "This is the subject",
-		Body : "This is the body"
-	}).then(
-		message => alert(message));
-	});
+	</script>
 }
 </body>
 </html>
