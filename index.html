@@ -319,7 +319,7 @@
 						</div>
 					</div>
 					<div>
-						<button class="submit full-width">Send Message</button>
+						<button class="submit full-width" onclick="sendEmail();">Send Message</button>
 						<div id="image-loader">
 							<img src="images/loader.gif" alt="" />
 						</div>
@@ -347,12 +347,6 @@
 				<div class="row">
 					<div class="columns">
 						<h3 class="address">Contact Us</h3>
-						<p>1, Girnar society<br>Mawdi plot, Rajkot<br>360004 IN</p>
-						<ul>
-							<li><a href="tel:7405409066">7405409066</a></li>
-							<li><a href="tel:7778918434">7778918434</a></li>
-							<li><a href="mailto:someone@Squirro.com">query@Squirro.com</a></li>
-						</ul>
 					</div> <!-- /columns -->
 					<div class="columns last">
 						<h3 class="contact">Follow Us</h3>
@@ -385,5 +379,19 @@
 		$("#spices").load("spices.html"); 
 	});
 	</script> 
+	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+	<script type="text/javascript">
+	function sendEmail() {
+		var contactEmail = $("#contactEmail").val();
+		Email.send({
+		SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+		To : 'inquiry@marvelventures.co.in',
+		From : contactEmail,
+		Subject : "This is the subject",
+		Body : "This is the body"
+	}).then(
+		message => alert(message));
+	});
+}
 </body>
 </html>
