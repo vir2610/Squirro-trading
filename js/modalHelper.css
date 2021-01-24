@@ -1,0 +1,19 @@
+.modal a.close-modal{
+
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #non-mobile-content { display: none; }  /* show it on small screens */
+}
+@media screen and (min-width: 401px) {
+    #mobile-content { display: none;  }  /* show it on small screens */
+}

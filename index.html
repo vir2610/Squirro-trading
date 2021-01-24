@@ -1,398 +1,1845 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
-	<!--- Basic Page Needs -->
-	<meta charset="utf-8">
-	<title>Squirro</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- CSS -->
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media-queries.css">
-	<script src="js/modernizr.js"></script>
-	<link rel="shortcut icon" href="favicon.png" >
-	<link href="css/smart_tab_vertical.css" rel="stylesheet" type="text/css"/>
-	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery.smartTab.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer type="text/javascript"></script>
-	<script type="text/javascript" src="js/vueTemplate.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-		$("#tabs").smartTab({autoProgress: false,stopOnFocus:true,transitionEffect:'vSlide'});
-		var app = new Vue({
-			el: '#App',
-			data: {
-				message: 'Hello Vue!',
-				currentSlide : {url: "../images/SQ_T_Images/1st.jpg", text: "Hie"},
-				slideCounter : 0,
-				bgc : {"background": 'url("images/SQ_T_Images/1st.jpg")'},
-				items: [
-					{url: "images/SQ_T_Images/1st.jpg", text: "Hie"},
-					{url: "images/SQ_T_Images/2nd.jpeg", text: "Hie"},
-					{url: "images/SQ_T_Images/3rd.jpeg", text: "Hie"},
-					{url: "images/SQ_T_Images/4th.jpeg", text: "Hie"},
-				]
-			},
-			methods : {
-				changeImage : function()
-				{
-					this.currentSlide = this.slider[this.slideCounter];
-					  this.slideCounter++;
-				}
-			}
-		})
-	});
-</script>
-	<script src="https://smtpjs.com/v3/smtp.js"></script>  
-	<script type="text/javascript">
-	function sendEmail() {
-		var contactEmail = $("#contactEmail").val();
-		Email.send({
-		SecureToken : "1073b77b-d4e5-4ed7-8fd4-2488d9fabcfe",
-		To : 'inquiry@marvelventures.co.in',
-		From : contactEmail,
-		Subject : "This is the subject",
-		Body : "This is the body"
-	}).then(
-		message => alert(message));
-	}
-	</script>
+	<meta charset="utf-8" name="description" content="Leading food export company with best quality food items, cheak peas, peanuts, pulses, turmeric, chilli, fenugreek seeds, flax seeds">
+    <title>Marvel Ventures - Food products exporter</title>
+    <meta name="description" content="Import export company with best quality food items like cheak peas, peanuts, pulses, turmeric, chilli, fenugreek seeds & flax seeds across the globe">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/icons/favicon-16x16.png">
+	<link rel="manifest" href="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/icons/site.webmanifest">
+	<link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&display=swap" media="screen">
+	<link rel="stylesheet" href="fonts/fa-minimal-req/css/fa-minimal-req.css" media="screen">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" media="screen" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/vir2610/resources@v1.0.2/marvelventures/css/base.min.css,gh/vir2610/resources@v1.0.2/marvelventures/css/contact.min.css,gh/vir2610/resources@v1.0.2/marvelventures/css/main.min.css,gh/vir2610/resources@v1.0.2/marvelventures/css/vendor.min.css" crossorigin="anonymous" media="screen">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/vir2610/resources@v1.0.2/marvelventures/css/base.min.css,gh/vir2610/resources@v1.0.2/marvelventures/css/contact.min.css,gh/vir2610/resources@v1.0.2/marvelventures/css/main.min.css,gh/vir2610/resources@v1.0.2/marvelventures/css/vendor.min.css" crossorigin="anonymous" media="screen">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+	<script async src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css" integrity="sha256-L17StzR9gFWAuelz9D9pmNDTieyml52nv+rPNRrncr0=" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" integrity="sha256-YgUy/S31uYiKsdojCExFoh8EtuyswDGXtkcKqCXpmqY=" crossorigin="anonymous"></script>
+	<script async src="https://cdn.jsdelivr.net/npm/lg-video@1.4.0/dist/lg-video.min.js" integrity="sha256-FbIZmxKRqBDiQOiYx7TK0NLXcfx/RCAKdR+NvYxw/4c=" crossorigin="anonymous"></script>
+	<script async src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/modules/lg-thumbnail.min.js" integrity="sha256-6Bch5OoA4xsAoUowrBDylowTXY0U9cbctwlD+OgSrz4=" crossorigin="anonymous"></script>
+	<script async src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/modules/lg-fullscreen.min.js" integrity="sha256-HeZ3Kttzx5nmbrTh9Y1Hj+BDYgyCcSaVWYql9bvhdlw=" crossorigin="anonymous"></script>
+	<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 </head>
 
-<body class="homepage" >
-	<div id="preloader">
-		<div id="status">
-			<img src="images/loader.gif" height="60" width="60" alt="">
-			<div class="loader">Loading...</div>
-		</div>
-	</div>
-	<!-- Header -->
-	<header id="main-header">
-		<div class="row header-inner">
-			<div class="logo">
-				<a class="smoothscroll" href="#squirro">Squirro</a>
-			</div>
-			<nav id="nav-wrap">
-				<a class="mobile-btn" href="#nav-wrap" title="Show navigation">
-					<span class='menu-text'>Show Menu</span>
-					<span class="menu-icon"></span>
-				</a>
-				<a class="mobile-btn" href="#" title="Hide navigation">
-					<span class='menu-text'>Hide Menu</span>
-					<span class="menu-icon"></span>
-				</a>
-				<ul id="nav" class="nav">
-					<li class="current">
-						<a class="smoothscroll" href="#squirro">Home</a>
-					</li>
-					<li>
-						<a class="smoothscroll" href="#products">Products</a>
-					</li>
-					<li>
-						<a class="smoothscroll" href="#blog">Blog</a>
-					</li>
-					<li>
-						<a class="smoothscroll" href="#about">About us</a>
-					</li>
-					<li>
-						<a class="smoothscroll" href="#contact">Contact us</a>
-					</li>
-				</ul>
-			</nav> <!-- /nav-wrap -->
-		</div> <!-- /header-inner -->
-	</header>
-	<!-- squirro -->
-	<div id="App"> 
-	<section id="squirro" class="imageClassTS">
-		<div class="row squirro-content">
-			<div class="twelve columns flex-container">
-				<div id="squirro-slider" class="flexslider">
-					<ul class="slides">
-						<!-- Slide -->
-						<!-- <li v-for="item in items" class="imageClassTS">
-							<div class="flex-caption">
-								 <img :src="item.url" />
-							</div>
-					    </li> -->
-					    
-					   <li >
-							<div class="flex-caption">
-								<h1>Hello, we are Squirro. We delivers awesome deals and eminent quality</h1>
-								<p><a class="button stroke smoothscroll" href="#about">More about us</a></p>
-							</div>
-						</li>
-						<li>
-							<div class="flex-caption">
-								<h1 >We exist to deliver best of it to the WORLD.</h1>
-								<p><a class="button stroke smoothscroll" href="#products">See our products</a></p>
-							</div>
-						</li> 
-    
-						<!-- Slide -->
-					</ul>
-				</div> <!-- .flexslider -->
-			</div> <!-- .flex-container -->
-		</div> <!-- .squirro-content -->
-	</section> <!-- #squirro -->
-	</div>
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <header class="s-header">
 
-	<section id="products">
-		<div class="row section-head">
-			<div class="twelve columns">
-				<h1>Our Products</h1>
-				<hr/>
-				<p>We grabs excellent quality products from different areas, if possible, mostly from where produced extensively with 					originated quality.</p>
-				<div align="left" class="prodDescpadding"><b>Labelling : As per buyer's requirement</b></div>
-			</div>
-			<div id="tabs">
-				<ul>
-					<li><a href="#spices">Spices</a></li>
-					<li><a href="#pulses">Pulses</a></li>
-					<li><a href="#ceramic">Ceramic</a></li>
-					<li><a href="#membrane">Membrane</a></li>
-				</ul>
-				<div id="spices">
-					
-				</div>
-				<div id="pulses">
-					
-				</div>
-				<div id="ceramic">
-					
-				</div>
-				<div id="membrane">
-					
-				</div>
-			</div>
-		</div>
-	</section> <!-- /services -->
+        <div class="row">
+            <div class="header-logo">
+                <a class="site-logo" href="index.html">
+                    <img data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/logo-marvel.png" class="lazyload" alt="Homepage" />
+                </a>
+            </div>
 
-	<!-- journal -->
-	<section id="blog">
-	<div class="row section-head">
-		<div class="twelve columns">
-			<h1>Our voice</h1>
-			<hr/>
-			<p>It happens quite often...Stay tuned</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="twelve columns">
-			<div id="blog-wrapper" class="bgrid-third s-bgrid-half mob-bgrid-whole group">
-				<article class="bgrid">
-					<h5>September 2, 2014</h5>
-					<h3><a href="single.html">Testing</a></h3>
-					<p>Testing going on</p>
-				</article>
-				<article class="bgrid">
-					<h5>August 29, 2014</h5>
-					<h3><a href="single.html">Testing 123</a></h3>
-					<p>Testing 123</p>
-				</article>
-				<article class="bgrid">
-					<h5>August 28, 2014</h5>
-					<h3><a href="single.html">Testing 456</a></h3>
-					<p>TEsting 456</p>
-				</article>
-				<!-- <article class="bgrid">
-					<h5>August 25, 2014</h5>
-					<h3><a href="single.html">Testing 789</a></h3>
-					<p>Testing 789</p>
-				</article> -->
-			</div> <!-- /blog-wrapper -->
-		</div> <!-- /twelve -->
-	</div> <!-- /row -->
-	</section> <!-- /blog -->
+            <nav class="header-nav-wrap">
+                <ul class="header-main-nav">
+                    <li class="current"><a class="smoothscroll" href="#home" title="intro">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="about">About Us</a></li>
+                    <li><a class="smoothscroll" href="#products" title="Products">Products</a></li>
+					<li><a class="smoothscroll" href="#gallary" title="Contact Us">Gallary</a></li>
+                    <li><a class="smoothscroll" href="#contactus" title="Contact Us">Contact Us</a></li>
+                </ul>
+            </nav> <!-- end header-nav-wrap -->
 
-	<!-- About Section -->
-	<section id="about">
-		<div class="row section-head">
-			<div class="twelve columns">
-				<h1>Who we are</h1>
-				<hr/>
-				<p>Under construction...</p>
-			</div>
-		</div>
-		<div class="row about-content">
-			<div class="mob-whole six columns left">
-				<h3>Our Process</h3>
-				<p>Processing steps goes here...</p>
-			</div> <!-- /left -->
-			<div class="mob-whole six columns right">
-				<h3>Our Approach</h3>
-				<p>Approaches here...</p>
-			</div> <!-- /right -->
-		</div> <!-- /row -->
-		<div class="row about-content">
-			<div class="mob-whole six columns left">
-				<h3>Our Goal</h3>
-				<p>Goal statement here..</p>
-			</div> <!-- /left -->
-			<div class="mob-whole six columns right">
-				<h3>Our Mission</h3>
-				<p>Mission starts now...</p>
-			</div> <!-- /right -->
-		</div> <!-- /row -->
-	<!-- team -->
-	<div id='team'>
-		<div class="row team section-head">
-			<div class="twelve columns">
-				<h1>Meet OUR Gems</h1>
-				<hr/>
-				<p>Team members will be here...</p>
-			</div>
-		</div>
-		<div class="row about-content">
-			<div class="twelve columns">
-				<div id="team-wrapper" class="bgrid-half mob-bgrid-whole group">
-					<div class="bgrid member">
-						<div class="member-header">
-							<div class="member-pic">
-								<img src="images/team/Jeet.jpg" alt=""/>
-							</div>
-							<div class="member-name">
-								<h3>Jeet Vekariya</h3>
-								<span>Founder and Delivery head</span>
-							</div>
-						</div>
-						<p>Jeet intro here..</p>
-						<ul class="member-social">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-						</ul>
-					</div> <!-- /member -->
-					<div class="bgrid member">
-						<div class="member-header">
-							<div class="member-pic">
-								<img src="images/team/Viraj.jpg" alt=""/>
-							</div>
-							<div class="member-name">
-								<h3>Viraj Vekariya</h3>
-								<span>IT Administration</span>
-							</div>
-						</div>
-						<p>Self employed cum part time freelancer for Software / Web development</p>
-						<ul class="member-social">
-							<li><a rel="noopener noreferrer" target="_blank" href="https://twitter.com/virajvekaria"><i class="fa fa-twitter"></i></a></li>
-							<li><a rel="noopener noreferrer" target="_blank" href="https://plus.google.com/+VirajVekaria"><i class="fa fa-google-plus"></i></a></li>
-							<li><a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/viraj-vekariya-0061a63a/"><i class="fa fa-linkedin"></i></a></li>
-						</ul>
-					</div> <!-- /member -->
-				</div> <!-- /twelve -->
-			</div> <!-- /team-wrapper -->
-		</div> <!-- /row -->
-	</div> <!-- /team -->
-	</section> <!-- /about -->
+            <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+        </div>
 
-	<!-- Contact Section -->
-	<section id="contact">
-		<div class="row section-head">
-			<div class="twelve columns">
-				<h1>Get in touch with us</h1>
-				<hr />
-				<p>Touch me touch me.....</p>
+    </header> <!-- end header -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/hero-bg.jpg" data-natural-width=954 data-natural-height=636 data-position-y=center>
+
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <div class="home-content__left">
+                    <h1>
+                    Welcome to,<br>
+                    Marvel Ventures
+                    </h1>
+
+                    <h3>
+                      Recognized as a leading processor & exporter of diverse range of Sesame seeds, Groundnut kernel, Spices, Pulses and many other agro products.
+                    </h3>
+
+                    <div class="home-content__btn-wrap">
+                        <a href="#contactus" class="btn btn--primary home-content__btn smoothscroll">
+                            Get The Quote now
+                        </a>
+                    </div>
+                </div> <!-- end home-content__left-->
+
+                <div class="home-content__right">
+					<img sizes="(max-width: 700px) 80vw, 735px" srcset="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/export-2/export_w_360.webp 480w,https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/export-2/export_w_480.webp 600w,https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/export-2/export_w_735.webp 700w","https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/export-2/export_w_1000.webp 1080w" src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/export-2/export_w_735.webp"
+					alt="Export products in container">
+                </div> <!-- end home-content__right -->
+
+            </div> <!-- end home-content__main -->
+
+            <ul class="home-content__social">
+                <li><a href="https://www.facebook.com/marvel.ventures9">Facebook</a></li>
+                <li><a href="https://twitter.com/Marvelventures9" target="_blank">twitter</a></li>
+                <li><a href="https://www.instagram.com/marvel.ventures9?r=nametag" target="_blank">Instagram</a></li>
+				<li><a href="https://www.linkedin.com/in/marvel-ventures-7a37b41b6" target="_blank">Linkedin</a></li>
+            </ul>
+
+        </div> <!-- end home-content -->
+
+        <a href="#about" class="home-scroll smoothscroll">
+            <span class="home-scroll__text">Scroll</span>
+            <span class="home-scroll__icon"></span>
+        </a>
+
+    </section> <!-- end s-home -->
+    <section id="about" class="s-about target-section">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1">
+                  Marvel Ventures was incorporated in the 2006.
+                </h1>
+                <p class="lead">
+                  Marvel Ventures is dedicated to procure, process & supply high
+                  quality food ingredients from India. we oﬀer indian origin
+                  products as per client requirement with superior quality
+                  and highest purity levels with a strict adherence to
+                  delivery schedule. Processing industries makes us efficient
+                  enough to process and export premium quality. We have good
+                  rapport and bonding with farmers, traders and APMC / Mandi.
+                </p>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row wide about-desc" data-aos="fade-up">
+
+            <div class="col-full slick-slider about-desc__slider">
+
+                <div class="about-desc__slide">
+                    <h3 class="item-title">Premium Quality</h3>
+
+                    <p>
+
+                      We as processor of peanuts and direct supplier from factory, always believe to deliver a premium quality to our customers.
+
+                    </p>
+                </div>  <!-- end about-desc__slide -->
+
+                <div class="about-desc__slide">
+                    <h3 class="item-title">Direct factory to buyer</h3>
+
+                    <p>
+                    We are committed to our premium qualitative factories to deliver us the goods which can satisfy your needs and quality.
+                    </p>
+                </div>  <!-- end about-desc__slide -->
+
+                <div class="about-desc__slide">
+                    <h3 class="item-title">Least price</h3>
+
+                    <p>
+                    As we are collaborated with direct procurement sources, we will be offering you the best rates compared to other competitors,
+										withot compromising on our product quality standards. Delivering the premim grade of our products at the best competitive rate has been our work ethic since several years of our establishment.
+                    </p>
+                </div>  <!-- end about-desc__slide -->
+
+                <div class="about-desc__slide">
+                    <h3 class="item-title">Custom packaging</h3>
+
+                    <p>
+                    We are always glad to support and fulfill your every specific needs regarding final packaging of our products.
+										We offer customized packaging as per client's requirements, such as customized brand labelling, printing etc.
+                    </p>
+                </div>  <!-- end about-desc__slide -->
+
+                <div class="about-desc__slide">
+                    <h3 class="item-title">Easy export terms</h3>
+
+                    <p>
+                    We belive and trust on your goodwill and reptation in the market.
+										Hence, we always work by creating a win-win situation for our valuable clients in terms of payment without compromising on the demanded quality of our products. Joining hands with us will surely be a profitable decision for both of us.
+										We constantly endevor to create long term business relation with our valuable clients.
+                    </p>
+                </div>  <!-- end about-desc__slide -->
+
+            </div> <!-- end about-desc__slider -->
+
+        </div> <!-- end about-desc -->
+
+    </section> <!-- end s-about -->
+    <section id="about-how" class="s-about-how" style="padding-bottom: 50px;">
+
+        <div class="row">
+           <div class="col-full video-bg" data-aos="fade-up">
+
+                <div class="shadow-overlay"></div>
+                <a class="btn-video" href="https://player.vimeo.com/video/459726707?color=00a650&title=0&byline=0&portrait=0" data-lity>
+                    <span class="video-icon"></span>
+                </a>
+           </div> <!-- end video-bg -->
+        </div>
+
+        <div class="row process-wrap" >
+
+            <h2 class="display-2 text-center" data-aos="fade-up">How We Works?</h2>
+
+            <div class="process" data-aos="fade-up">
+                <div class="process__steps block-1-2 block-tab-full group">
+
+                    <div class="col-block step">
+                        <h3 class="item-title">Raw material and process</h3>
+                        <p>Procure goods and process according to counts and other specifications.
+                        </p>
+                    </div>
+
+                    <div class="col-block step">
+                        <h3 class="item-title">Marketing</h3>
+                        <p>Business marketing for the same goods which we process and set requirements according buyers and offer them quotes.
+                        </p>
+                    </div>
+
+                    <div class="col-block step">
+                        <h3 class="item-title">Negotiation</h3>
+                        <p>some sort of negotiation space in quote always.This how business works. Right?
+                        </p>
+                    </div>
+
+                    <div class="col-block step">
+                        <h3 class="item-title">Container loading</h3>
+                        <p>20ft or 40ft whichever is required we offer cif, c&f/cnf to the customer ports we prepare accordingly and deliver it.
+                        </p>
+                    </div>
+                </div> <!-- end process__steps -->
+           </div> <!-- end process -->
+        </div> <!-- end about-how -->
+    </section> <!-- end s-about-how -->
+    <section id="products" class="s-features target-section">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1">
+                    Loaded With Best Qualities You Would Absolutely Love.
+                </h1>
+                <p class="lead">
+                    Being quality conscious organization ,all our produce from associated growers are closely monitored in various growth stages till packaging, the produce can be tested in APEDA recognized laboratories as per customer’s need.
+                </p>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row features block-1-3 block-m-1-2">
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex1" rel="modal:open">
+                      <img class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/1-peanuts-raw.webp" alt="Raw peanuts">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Raw Peanuts</h3>
+                    <p>
+                      <b>Botanical Name:</b> Arachis hypogea</br>
+                      <b>Origin:</b> India</br>
+                      <b>Harvest Season:</b>	Apr, May, Sept & Oct</br>
+                      <b>Variety Available:</b> BOLD, JAVA, TJ</br>
+                      <b>Shelf Life:</b> 1 Year From Production</br>
+                      <b>Storage Condition:</b> Cool And Dry</br>
+                      <b>M O Q:</b>	19 MT
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex2" rel="modal:open">
+                      <img class="lazyload product_img"  data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/2-blanched_peanuts_1.webp" alt="Blanched peanuts">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Blanched Peanuts</h3>
+                    <p>
+                        <b>Botanical Name:</b>	Arachis hypogea</br>
+                        <b>Origin:</b> 	India</br>
+                        <b>Availability:</b> 	Whole Year</br>
+                        <b>Harvest Season:</b> 	Sept, Oct.</br>
+                        <b>Storage Condition:</b> 	Cool & Dry</br>
+                        <b>M O Q:</b>	19 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex3" rel="modal:open">
+                      <img class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/21-splitted-peanuts.webp" alt="Splitted peanuts">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Splitted Peanuts</h3>
+                    <p>
+                      <b>Botanical Name:</b>	Arachis hypogea</br>
+                      <b>Origin:</b> 	India</br>
+                      <b>Availability:</b> 	Whole Year</br>
+                      <b>Harvest Season:</b> 	Sept, Oct.</br>
+                      <b>Storage Condition:</b> 	Cool & Dry</br>
+                      <b>M O Q:</b>	19 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex4" rel="modal:open">
+                      <img class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/3-CHIKPEAS.webp" alt="Chik peas">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Chickpeas</h3>
+                    <p>
+                      <b>Botanical Name:</b>	Cicer Arietinum</br>
+                      <b>Origin:</b>	India</br>
+                      <b>Harvesting Season:</b>	Feb, Mar</br>
+                      <b>Shelf Life:</b>	1 Year From Production</br>
+                      <b>Storage Condition:</b>	Cool And Dry</br>
+                      <b>M O Q:</b>	24 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex5" rel="modal:open">
+                      <img class="lazyload product_img"  data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/4-huled_sesame_seed.webp" alt="Huled seasame seeds">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Hulled Sesame Seeds</h3>
+                    <p>
+                        <b>Botanical Name:</b> Sesamum Indicum</br>
+                        <b>Origin:</b> Gujarat - India</br>
+                        <b>Harvesting Season:</b>	April, May, Sept, Oct</br>
+                        <b>Shelf Life:</b> 1 Year From Production </br>
+                        <b>Storage Condition:</b>	Cool And Dry</br>
+                        <b>M O Q:</b>	18 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex6" rel="modal:open">
+                      <img class="lazyload product_img"  data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/5-natural_sesame.webp" alt="Natural seasame seeds">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Natural Sesame Seeds</h3>
+                    <p>
+                      <b>Botanical Name:</b>	Sesamum Indicum</br>
+                      <b>Origin:</b> Gujarat - India</br>
+                      <b>Colour:</b>	Natural White, Black, Z-Black</br>
+                      <b>Harvesting Season:</b>	April, May, Sept, Oct</br>
+                      <b>Shelf Life:</b> 1 Year From Production</br>
+                      <b>Storage Condition:</b>	Cool And Dry</br>
+                      <b>M O Q:</b>	18 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a  class="product_img site-logo"  href="#ex7" rel="modal:open">
+                      <img class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/6-CUMIN_SEEDS.webp"  alt="Cumin seeds">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Cumin Seeds</h3>
+                    <p>
+                      <b>Botanical Name:</b>	Cuminum cyminum</br>
+                      <b>Origin:</b>	Gujarat - India</br>
+                      <b>Harvesting Season:</b>	March, April</br>
+                      <b>Shelf Life:</b> 1 Year From Production</br>
+                      <b>Storage Condition:</b>	Cool And Dry</br>
+                      <b>M O Q:</b>	13 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex8" rel="modal:open">
+                      <img class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/7-coriander_seeds.webp" alt="Coriander seeds">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Coriander Seeds</h3>
+                    <p>
+                        <b>Botanical Name:</b>Coriandrum Sativum</br>
+                        <b>Origin:</b> Gujarat - India,</br>
+                        <b>Harvesting Season:</b> Feb & Mar</br>
+                        <b>Shelf Life:</b> 1 Year From Production</br>
+                        <b>Storage Condition:</b> Cool And Dry</br>
+                        <b>M O Q:</b>	10 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex9" rel="modal:open">
+                      <img class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/8-coriander-powder.webp" alt="Coriander powder">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Coriander Powder</h3>
+                    <p>
+                        <b>Botanical Name:</b>Coriandrum sativum</br>
+                        <b>Origin:</b> India</br>
+                        <b>Harvesting Season:</b>	Feb & Mar</br>
+                        <b>Availability:</b> Whole Year</br>
+                        <b>Shelf Life:</b> 1 Year From Production</br>
+                        <b>M O Q:</b>	10 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex10" rel="modal:open">
+                      <img class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/9-muster_seeds.webp" alt="Musterd seeds">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Musterd Seeds</h3>
+                    <p>
+                      <b>Botanical Name:</b>	Brassica Alba L</br>
+                      <b>Origin:</b>	India</br>
+                      <b>Seed Colour Available:</b>	Black-Brown & Yellow</br>
+                      <b>Harvesting Season:</b>	Feb, March</br>
+                      <b>Shelf Life:</b>	1 Year From Production</br>
+                      <b>Storage Condition:</b>	Cool and Dry</br>
+                      <b>M O Q:</b> 21 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex11" rel="modal:open">
+                      <img class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/91-fenugreek.webp" alt="Fenugreek seeds">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Fenugreek Seeds</h3>
+                    <p>
+                      <b>Botanical Name:</b> Trigonella foenum-graecum</br>
+                      <b>Origin:</b>	 India</br>
+                      <b>Harvesting Season:</b>	 Feb, March</br>
+                      <b>Shelf Life:</b> 	1 Year From Production</br>
+                      <b>Storage Condition:</b>	Cool And Dry</br>
+                      <b>M O Q:</b>	23 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex12" rel="modal:open">
+                      <img  class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/92-flax_seeds.webp" alt="Flax seeds">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Flex Seeds</h3>
+                    <p>
+                      <b>Botanical Name:</b>	Linum usitatissimum</br>
+                      <b>Origin:</b>	India</br>
+                      <b>Harvesting Season:</b>	Feb & Mar</br>
+                      <b>Shelf Life:</b>	1 Year From Production</br>
+                      <b>Storage Condition:</b>	Cool And Dry</br>
+                      <b>M O Q:</b>	20 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex13" rel="modal:open">
+                      <img  class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/93-chilli-powder.webp" alt="Chilli powder">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Chilli Powder</h3>
+                    <p>
+                        <b>Botanical Name:</b>	Capsicum Frutescens</br>
+                        <b>Harvesting Season:</b>	Jan To Apr</br>
+                        <b>Origin:</b>	India</br>
+                        <b>Availability:</b>	Whole Year</br>
+                        <b>Shelf Life:</b>	1 Year From Production</br>
+                        <b>M O Q:</b>	10 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex14" rel="modal:open">
+                      <img  class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/94-turmeric_powder.webp" alt="Turmeric powder">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Turmeric Powder</h3>
+                    <p>
+                      <b>Botanical Name:</b>	Curcumin Longa</br>
+                      <b>Origin:</b>	India</br>
+                      <b>Harvest Season:</b> Feb & Mar</br>
+                      <b>Availability:</b>	Whole Year</br>
+                      <b>Shelf Life:</b> 	1 Year From Production</br>
+                      <b>Storage Condition:</b> Cool and Dry</br>
+                      <b>M O Q:</b>	18 MT</br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block item-feature" data-aos="fade-up">
+                <div class="item-feature__icon">
+                  <a class="site-logo" href="#ex15" rel="modal:open">
+                      <img class="lazyload product_img" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/95-turmeric_fingures.webp" alt="Turmeric fingures">
+                  </a>
+                </div>
+                <div class="item-feature__text">
+                    <h3 class="item-title">Turmeric Fingers</h3>
+                    <p>
+                      <b>Botanical Name:</b>	Curcumin Longa</br>
+                      <b>Type:</b>	Unpolished, Single Polish ,Double Polish</br>
+                      <b>Origin:</b> 	India</br>
+                      <b>Harvest Season:</b> 	Feb & Mar</br>
+                      <b>Shelf Life:</b> 	1 Year From Production</br>
+                      <b>Storage Condition:</b> 	Cool And Dry</br>
+                      <b>M O Q:</b> 	18 MT</br>
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end features -->
+
+    </section> <!-- end s-features -->
+    <section  class="s-download s-download_updated">
+
+        <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1">
+                    Why work with us for Export?
+                </h1>
+                <div class="col-block item-feature aos-init aos-animate" data-aos="fade-up">
+                  <div class="item-feature__icon">
+                      <i class="icon-lego-block"></i>
+                  </div>
+                  <div class="item-feature__text">
+                      <h3 class="item-title">We understand Import/Export business & Industry</h3>
+                      <p>
+						<b>We are extremely good at what we do</b><br/>
+						Import/Export of food products professionally for more than 10 years and are expert of challanging the price and quality to our clients</p>
+
+						<p><b>We know how integrated communications work</b><br/>
+						We have worked with many importer and exporters around the globe in sidely used food disciplines, both in-house and agency-side. This means we fit seamlessly into Import/Export industry, if required, are always happy to put clients in touch with other specialists.</p>
+
+						<p><b>We care about what we do</b><br/>
+						We always want to do well by our clients: we care about their reputation as much as we do about ours. This is partly professional pride, partly personal ethics. Doing a good job really matters to us.</p>
+                      </p>
+                  </div>
+              </div>
+            </div>
+        </div> <!-- end section-header -->
+    </section> <!-- end s-download -->
+	<section id="gallary" class="s-gallary target-section">
+
+		<div id="wrap-contact100_1" class="wrap-contact100">
+			<div id="video-gallery">
+			  <a href="https://www.youtube.com/watch?v=zs_eizgGiTc" data-poster="images/gallary-vid-1.gif">
+				  <img src="images/gallary-vid-1.gif" />
+			  </a>
+			  <a href="https://vimeo.com/1084537" data-poster="images/gallary-vid-1.gif">
+				  <img src="images/gallary-vid-1.gif" />
+			  </a>
 			</div>
 		</div>
-		<div class="row form-section">
-			<div id="contact-form" class="twelve columns">
-				<form name="contactForm" id="contactForm" method="post" action="">
-				<fieldset>
-					<div class="row">
-						<div class="six columns mob-whole">
-							<label for="contactFname">First Name <span class="required">*</span></label>
-							<input name="contactFname" type="text" id="contactFname" placeholder="First Name" value="" />
-						</div>
-						<div class="six columns mob-whole">
-							<label for="contactLname">Last Name <span class="required">*</span></label>
-							<input name="contactLname" type="text" id="contactLname" placeholder="Last Name" value="" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="six columns mob-whole">
-							<label for="contactEmail">Email <span class="required">*</span></label>
-							<input name="contactEmail" type="text" id="contactEmail" placeholder="Email" value="" />
-						</div>
-						<div class="six columns mob-whole">
-							<label for="contactSubject">Subject</label>
-							<input name="contactSubject" type="text" id="contactSubject" placeholder="Subject"  value="" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="twelve columns">
-							<label  for="contactMessage">Message <span class="required">*</span></label>
-							<textarea name="contactMessage"  id="contactMessage" placeholder="Your Message" rows="10" cols="50" ></textarea>
-						</div>
-					</div>
-					<div>
-						<button class="submit full-width" onclick="sendEmail()">Send Message</button>
-						<div id="image-loader">
-							<img src="images/loader.gif" alt="" />
-						</div>
-					</div>
-				</fieldset>
-			</form> <!-- /contactForm -->
-
-			<!-- message box -->
-			<div id="message-warning"></div>
-			<div id="message-success">
-				<i class="fa fa-check"></i>Your message was sent, thank you!<br />
-			</div>
-		</div> <!-- /contact-form -->
-	</div> <!-- /form-section -->
-	</section>  <!-- /contact-->
+	</section>
 	
-	<!-- Footer-->
-	<footer>
-		<div class="row">
-			<div class="six columns tab-whole footer-about">
-				<h3>About Squirro</h3>
-				<p>About us footer content</p>
-			</div> <!-- /footer-about -->
-			<div class="six columns tab-whole right-cols">
-				<div class="row">
-					<div class="columns">
-						<h3 class="address">Contact Us</h3>
-					</div> <!-- /columns -->
-					<div class="columns last">
-						<h3 class="contact">Follow Us</h3>
-						<ul>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">GooglePlus</a></li>
-							<li><a href="#">Instagram</a></li>
-							<li><a href="#">Linkedin</a></li>
-						</ul>
-					</div> <!-- /columns -->
-				</div> <!-- /Row(nested) -->
+	<section id="contactus" class="container-contact100 target-section">
+
+		<div id="wrap-contact100_1" class="wrap-contact100">
+			<form id="contact100_validate_form_1" class="contact100-form validate-form">
+				<span id="contact100-form-title" class="contact100-form-title">
+					Drop us a line on YOUR NEEDS!
+				</span>
+
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<label class="label-input100" for="fullname">Full name</label>
+					<input id="fullname" class="input100" type="text" name="fullname" placeholder="Enter your name...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<label class="label-input100" for="email">Email Address</label>
+					<input id="email" class="input100" type="text" name="email" placeholder="Enter your email...">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<div class="label-input100">What do you need?</div>
+					<div>
+						<select class="js-select2" name="service">
+							<option>Please chooses</option>
+							<option>Chik Peas</option>
+							<option>Pulses</option>
+							<option>Seasame Seeds</option>
+							<option>Fenugreek seeds</option>
+							<option>Coriander seeds</option>
+							<option>Peanuts</option>
+							<option>Cumin seeds</option>
+							<option>Coriander Powder</option>
+							<option>Musterd seeds</option>
+							<option>Flax seeds</option>
+							<option>Chilli Powder</option>
+							<option>Turmeric Powder</option>
+							<option>Turmeric Fingures</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<label class="label-input100" for="message">Message</label>
+					<textarea id="message" class="input100" name="inquiry_message" placeholder="Type your message here..."></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div id="container-contact100-form-btn" class="container-contact100-form-btn">
+					<button id="contact100-form-btn" class="contact100-form-btn" onclick="sendEmail()">
+						Send
+					</button>
+				</div>
+
+				<div class="contact100-form-social flex-c-m">
+					<a href="https://www.facebook.com/marvel.ventures9" target="_blank" class="contact100-form-social-item flex-c-m bg1 m-r-5">
+						<i class="icon-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="https://twitter.com/Marvelventures9" class="contact100-form-social-item flex-c-m bg2 m-r-5" target="_blank">
+						<i class="icon-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="https://www.instagram.com/marvel.ventures9?r=nametag" class="contact100-form-social-item flex-c-m bg3 m-r-5" target="_blank">
+						<i class="icon-instagram" aria-hidden="true"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/marvel-ventures-7a37b41b6" class="contact100-form-social-item flex-c-m bg3 m-r-5" target="_blank">
+					<i aria-hidden="true"><img sizes="(max-width: 64px) 100vw, 64px" srcset="fonts/li-w-32.webp 32w,fonts/li-w-64.webp 64w" src="fonts/li-w-64.webp" alt=""></i>
+					</a>
+				</div>
+			</form>
+			<div id="contact100-more" class="contact100-more flex-colcontact-c-m" style="background-image: url('https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/contact_leftimg.jpg');">
 			</div>
-			<div id="go-top">
-				<a class="smoothscroll" title="Back to Top" href="#squirro"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
+		</div>
+	</section>
+	<footer class="s-footer footer"> <!-- end footer__top -->
+
+        <div class="row footer__top">
+
+            <div class="footer__about col-five tab-full left">
+
+                <h4>About Marvel Ventures.</h4>
+
+                <p>
+                  We as import-export company are always looking for win-win situation for both our suppliers and customers...
+                  Our role is of facilitator to cater the needs of our customers and serve them to highest degree of punctuation.
+                </p>
+
+                <ul class="footer__social">
+                    <li><a href="https://www.facebook.com/marvel.ventures9" target="_blank" rel="noreferrer" class="contact100-form-social-item flex-c-m bg1 m-r-5"><i class="icon-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/Marvelventures9" class="contact100-form-social-item flex-c-m bg2 m-r-5" target="_blank" rel="noreferrer"><i class="icon-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/marvel.ventures9?r=nametag" target="_blank" rel="noreferrer"><i class="icon-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/marvel-ventures-7a37b41b6" target="_blank" rel="noreferrer"><i aria-hidden="true"><img sizes="(max-width: 64px) 100vw, 64px" srcset="fonts/li-w-32.webp 32w,fonts/li-w-64.webp 64w" src="fonts/li-w-64.webp" alt=""></i>
+                </ul>
+            </div>
+
+						<!-- Link to open the modal -->
+
+            <div class="col-five md-seven tab-full right end">
+                <div class="row">
+                    <div class="footer__site-links col-five mob-full">
+                        <h4>Site links.</h4>
+
+                        <ul class="footer__site-links">
+                            <li><a href="#home" class="smoothscroll">Home</a></li>
+                            <li><a href="#about" class="smoothscroll">About Us</a></li>
+                            <li><a href="#products" class="smoothscroll">Products</a></li>
+                            <li><a href="#contactus" class="smoothscroll">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact col-seven mob-full">
+                        <h4>Contact Us.</h4>
+                        <p>
+                        Phone: (+91) 8866432631 <br>
+                        </p>
+                        <p>
+                        Need help or have a question? Contact us at: <br>
+                        <a href="mailto:#0" class="footer__mail-link">inquiry@marvelventures.co.in</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-full ss-copyright">
+                <span>&copy; Copyright Marvel Ventures 2020</span>
+                <span>Design by <a href="#">VRDP Solutions.</a></span>
+            </div>
+
+        </div> <!-- end footer__bottom -->
+
+        <div class="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        </div>
+
+    </footer>
+		<div id="ex1" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex15" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex15" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex2" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/1-peanuts-raw.webp" alt="Raw peanuts">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Raw Peanuts</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Arachis hypogea</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>India</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Apr, May, Sept & Oct</td>
+							</tr>
+							<tr>
+								<td>Variety Available:</td>
+								<td>BOLD, JAVA, TJ</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool And Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>19 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex2" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
 			</div>
-		</div> <!-- /row -->
-	</footer> <!-- /footer -->
-	<!-- Java Script -->
-<!-- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-<!-- 	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script> -->
-	<script src="js/jquery.flexslider.js"></script>
-	<script src="js/jquery.fittext.js"></script>
-	<script src="js/backstretch.js"></script>
-	<script src="js/waypoints.js"></script>
-	<script src="js/main.js"></script>
+		</div>
+
+		<div id="ex2" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex1" rel="modal:open">
+						<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex1" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex3" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/2-blanched_peanuts_1.webp" alt="Blanched Peanuts">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Blanched Peanuts</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Arachis hypogea</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Sept, Oct.</td>
+							</tr>
+							<tr>
+								<td>Variety Available:</td>
+								<td>BOLD, JAVA, TJ</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>19 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex3" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex3" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex2" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex2" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex4" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/21-splitted-peanuts.webp" alt="Splitted Peanuts">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Splitted Peanuts</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Arachis hypogea</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Sept, Oct.</td>
+							</tr>
+							<tr>
+								<td>Variety Available:</td>
+								<td>BOLD, JAVA, TJ</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>19 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex4" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex4" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex3" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex3" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex5" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/3-CHIKPEAS.webp" alt="Chickpeas">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Chickpeas</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Cicer Arietinum</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Feb, Mar</td>
+							</tr>
+							<tr>
+								<td>Variety Available:</td>
+								<td>BOLD, JAVA, TJ</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>24 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex5" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex5" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex4" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex4" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex6" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/4-huled_sesame_seed.webp" alt="Huled seasame seeds">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Huled seasame seeds</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Sesamum Indicum</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>Gujarat - India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>April, May, Sept, Oct</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>18 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex6" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex6" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex5" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex5" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex7" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/5-natural_sesame.webp" alt="Natural seasame seeds">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Natural seasame seeds</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Sesamum Indicum</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>Gujarat - India</td>
+							</tr>
+							<tr>
+								<td>Color:</td>
+								<td>Natural White, Black, Z-Black</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>April, May, Sept, Oct</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>18 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex7" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex7" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex6" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex6" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex8" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/6-CUMIN_SEEDS.webp"  alt="Cumin seeds">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Cumin seeds</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Cuminum cyminum</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>Gujarat - India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>March, April</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>13 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex8" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex8" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex7" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex7" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex9" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/7-coriander_seeds.webp" alt="Coriander seeds">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Coriander seeds</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Coriandrum Sativum</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>Gujarat - India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Feb & Mar</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>10 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex9" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex9" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex8" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex8" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex10" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/8-coriander-powder.webp" alt="Coriander powder">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Coriander powder</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Coriandrum sativum</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>Gujarat - India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Feb & Mar</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>10 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex10" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex10" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex9" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex9" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex11" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/9-muster_seeds.webp" alt="Musterd seeds">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Musterd seeds</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Brassica Alba L</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>Gujarat - India</td>
+							</tr>
+							<tr>
+								<td>Seed Colour Available:</td>
+								<td>Black-Brown & Yellow</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Feb & Mar</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>21 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex11" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex11" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex10" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex10" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex11" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/91-fenugreek.webp" alt="Fenugreek seeds">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Fenugreek seeds</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Trigonella foenum-graecum</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Feb & Mar</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>23 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex12" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex12" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex11" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex11" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex13" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/92-flax_seeds.webp" alt="Flax seeds">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Flax seeds</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Linum usitatissimum</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Feb & Mar</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>20 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex13" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex13" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div  style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex12" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex12" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex14" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/93-chilli-powder.webp" alt="Chilli powder">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Chilli powder</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Capsicum Frutescens</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Jan To Apr</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>10 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex14" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex14" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex13" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex13" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex15" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/94-turmeric_powder.webp" alt="Turmeric powder">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Turmeric powder</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Curcumin Longa</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Feb & Mar</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>18 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex15" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<div id="ex15" class="modal" style="overflow: auto; margin-top:75px;max-width: 90%;">
+			<div style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+					<a class="site-logo" href="#ex14" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-1"  id="mobile-content" style="padding-left: 40%">
+					<a class="site-logo" href="#ex14" rel="modal:open">
+							<i class="icon-left-open" aria-hidden="true"></i>
+					</a>
+					<a class="site-logo" href="#ex1" rel="modal:open">
+							<i class="icon-right-open" aria-hidden="true"></i>
+					</a>
+				</div>
+					<div class="item-feature__icon col-md-4">
+						<span class="site-logo">
+								<img class="lazyload product_img" style="margin-top: 55px;" data-src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/images/products/95-turmeric_fingures.webp" alt="Turmeric fingures">
+						</span>
+					</div>
+
+					<div class="item-feature__text col-md-6">
+							<h3 class="item-title">Turmeric fingures</h3>
+							<table class="table">
+							<tbody>
+							<tr>
+								<td>Botanical Name:</td>
+								<td>Curcumin Longa</td>
+							</tr>
+							<tr>
+								<td>Type:</td>
+								<td>Unpolished, Single Polish ,Double Polish</td>
+							</tr>
+							<tr>
+								<td>Origin:</td>
+								<td>India</td>
+							</tr>
+							<tr>
+								<td>Availability:</td>
+								<td>Whole Year</td>
+							</tr>
+							<tr>
+								<td>Harvest Season:</td>
+								<td>Feb & Mar</td>
+							</tr>
+							<tr>
+								<td>Shelf Life</td>
+								<td>1 Year From Production</td>
+							</tr>
+							<tr>
+								<td>Storage Condition:</td>
+								<td>Cool & Dry</td>
+							</tr>
+							<tr>
+								<td>M O Q:</td>
+								<td>18 MT</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-1" style="font-size: 13.8rem;" id="non-mobile-content">
+						<a class="site-logo" href="#ex1" rel="modal:open">
+								<i class="icon-right-open" aria-hidden="true"></i>
+						</a>
+					</div>
+			</div>
+		</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/js/plugins.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/vir2610/resources@v1.0.2/marvelventures/js/main.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js" integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous"></script>
 	<script>
-	$(function(){
-		$("#spices").load("spices.html"); 
-	});
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+		$(".js-select2").each(function(){
+			$(this).on('select2:open', function (e){
+				$(this).parent().next().addClass('eff-focus-selection');
+			});
+		});
+		$(".js-select2").each(function(){
+			$(this).on('select2:close', function (e){
+				$(this).parent().next().removeClass('eff-focus-selection');
+			});
+		});
 	</script>
-}
+	<script async src="js/modalHelper.js"></script>
+	<script async src="js/contact_validation.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+		function sendEmail() {
+			var contactEmail = $("input[name=email]").val();
+			var message = $("input[name=inquiry_message]").val();
+			var subject = $("input[name=service]").val();
+			var name = $("input[name=fullname]").val();
+			var template = "<!doctype html>\n" +
+            "<html>\n" +
+            "  <head>\n" +
+            "  </head>\n" +
+            "  <body class=\"\" style=\"background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;\">\n" +
+            "    <span class=\"preheader\" style=\"color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;\">This is preheader text. Some clients will show this text as a preview.</span>\n" +
+            "    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"body\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;\">\n" +
+            "      <tr>\n" +
+            "        <td style=\"font-family: sans-serif; font-size: 14px; vertical-align: top;\">&nbsp;</td>\n" +
+            "        <td class=\"container\" style=\"font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; Margin: 0 auto; max-width: 580px; padding: 10px; width: 580px;\">\n" +
+            "          <div class=\"content\" style=\"box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;\">\n" +
+            "\n" +
+            "            <!-- START CENTERED WHITE CONTAINER -->\n" +
+            "            <table class=\"main\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;\">\n" +
+            "\n" +
+            "              <!-- START MAIN CONTENT AREA -->\n" +
+            "              <tr>\n" +
+            "                <td class=\"wrapper\" style=\"font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;\">\n" +
+            "                  <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;\">\n" +
+            "                    <tr>\n" +
+            "                      <td style=\"font-family: sans-serif; font-size: 14px; vertical-align: top;\">\n" +
+            "                        <p style=\"font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;\"><b>Hi there,</b></p>\n" +
+            "\t\t\t\t\t\t<p style=\"font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;\"><b>NAME_HOLDER</b> has inquiry for you in following terms..</p>\n" +
+            "                        <p style=\"font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;\">MSG_HOLDER</p>\n" +
+            "                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"btn btn-primary\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;\">\n" +
+            "                          <tbody>\n" +
+            "                            <tr>\n" +
+            "                              <td align=\"left\" style=\"font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;\">\n" +
+            "                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;\">\n" +
+            "                                  <tbody>\n" +
+            "                                    <tr>\n" +
+            "                                    </tr>\n" +
+            "                                  </tbody>\n" +
+            "                                </table>\n" +
+            "                              </td>\n" +
+            "                            </tr>\n" +
+            "                          </tbody>\n" +
+            "                        </table>\n" +
+            "                        <p style=\"font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;\"><b>This is systm generated email, no need to reply on this thread unless you want to land your reply on MARS !!</b></p>\n" +
+            "                      </td>\n" +
+            "                    </tr>\n" +
+            "                  </table>\n" +
+            "                </td>\n" +
+            "              </tr>\n" +
+            "\n" +
+            "            <!-- END MAIN CONTENT AREA -->\n" +
+            "            </table>\n" +
+            "\n" +
+            "            <!-- START FOOTER -->\n" +
+            "            <div class=\"footer\" style=\"clear: both; Margin-top: 10px; text-align: center; width: 100%;\">\n" +
+            "              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;\">\n" +
+            "                <tr>\n" +
+            "                  <td class=\"content-block powered-by\" style=\"font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;\">\n" +
+            "                    Powered by <a href=\"#\" style=\"color: #999999; font-size: 12px; text-align: center; text-decoration: none;\">Devloper sign</a>.\n" +
+            "                  </td>\n" +
+            "                </tr>\n" +
+            "              </table>\n" +
+            "            </div>\n" +
+            "            <!-- END FOOTER -->\n" +
+            "          <!-- END CENTERED WHITE CONTAINER -->\n" +
+            "          </div>\n" +
+            "        </td>\n" +
+            "        <td style=\"font-family: sans-serif; font-size: 14px; vertical-align: top;\">&nbsp;</td>\n" +
+            "      </tr>\n" +
+            "    </table>\n" +
+            "  </body>\n" +
+            "</html>";
+			var Obj = {
+				NAME_HOLDER: name,
+				SUB_HOLDER: subject,
+				MSG_HOLDER: message
+			};
+			var finalBody = template.replace(/NAME_HOLDER|SUB_HOLDER|MSG_HOLDER/gi, function(matched){
+                return Obj[matched];
+            });
+			Email.send({
+			SecureToken : "1073b77b-d4e5-4ed7-8fd4-2488d9fabcfe",
+			To : 'inquiry@marvelventures.co.in',
+			From : contactEmail,
+			Subject : "Inquiry regarding "+subject+" from "+name,
+			Body : finalBody
+		}).then(
+			message => {
+				$("#alert_message")[0].innerText = "Thank you for contacting Us, we'll get back to you ASAP!";
+				$("input[name=email]").val("");
+				$("input[name=message]").val("");
+				$("input[name=subject]").val("");
+				$("input[name=fullname]").val("");
+				setTimeout(function(){ $("#alert_message")[0].innerText="" }, 5000);
+			}
+		);
+		}
+	</script>
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f671fe64704467e89f08af0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CXGNQM5QV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9CXGNQM5QV');
+</script>
+<!--End of Tawk.to Script-->
+<link rel="stylesheet" type="text/css" href="js/modalHelper.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.js" defer></script><script>$(document).ready(function(){setTimeout(function(){window.wpcc.init({"corners":"small","colors":{"popup":{"background":"#f0edff","text":"#000000","border":"#5e65c2"},"button":{"background":"#5e65c2","text":"#ffffff"}},"border":"normal","padding":"small","margin":"large","transparency":"10","content":{"href":"https://www.websitepolicies.com/policies/view/mAl6EhvZ","message":"This website uses self/third-party cookies to ensure you get the best experience on our website","link":"Read more on our policy"}})},3000);});</script>
 </body>
 </html>
