@@ -27,11 +27,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 	<script async src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css" integrity="sha256-L17StzR9gFWAuelz9D9pmNDTieyml52nv+rPNRrncr0=" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" integrity="sha256-YgUy/S31uYiKsdojCExFoh8EtuyswDGXtkcKqCXpmqY=" crossorigin="anonymous"></script>
-	<script async src="https://cdn.jsdelivr.net/npm/lg-video@1.4.0/dist/lg-video.min.js" integrity="sha256-FbIZmxKRqBDiQOiYx7TK0NLXcfx/RCAKdR+NvYxw/4c=" crossorigin="anonymous"></script>
-	<script async src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/modules/lg-thumbnail.min.js" integrity="sha256-6Bch5OoA4xsAoUowrBDylowTXY0U9cbctwlD+OgSrz4=" crossorigin="anonymous"></script>
-	<script async src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/modules/lg-fullscreen.min.js" integrity="sha256-HeZ3Kttzx5nmbrTh9Y1Hj+BDYgyCcSaVWYql9bvhdlw=" crossorigin="anonymous"></script>
 	<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 </head>
@@ -571,15 +566,25 @@
         </div> <!-- end section-header -->
     </section> <!-- end s-download -->
 	<section id="gallary" class="s-gallary target-section">
-
-		<div id="wrap-contact100_1" class="wrap-contact100">
-			<div id="video-gallery">
-			  <a href="https://www.youtube.com/watch?v=zs_eizgGiTc" data-poster="images/gallary-vid-1.gif">
-				  <img src="images/gallary-vid-1.gif" />
-			  </a>
-			  <a href="https://vimeo.com/1084537" data-poster="images/gallary-vid-1.gif">
-				  <img src="images/gallary-vid-1.gif" />
-			  </a>
+		<div id="wrap-contact100_1" class="wrap-contact100" style="padding-bottom: 10rem;padding-top: 10rem;">
+			<div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1">
+                    Our Showcase !!
+                </h1>
+            </div>
+			</div> <!-- end section-header -->
+			<div style="height: 100%;width: 100%;margin-right: 10%;margin-left: 10%;">
+				<div style="display:none;" class="html5gallery" data-responsive="true" data-skin="vertical" data-width="400" data-height="225">
+	    
+			<!-- Add images to Gallery -->
+				   <a href="images/gallary-vid-1.gif"><img src="images/gallary-vid-1.gif" alt="Products 1"></a>
+				   <a href="images/gallary-vid-1.gif"><img src="images/gallary-vid-1.gif" alt="Products 2"></a>
+				   
+				   
+				   <!-- Add video to Gallery -->
+				   <a href="https://player.vimeo.com/video/459726707?color=00a650&title=0&byline=0&portrait=0"><img src="images/gallary-vid-1.gif" alt="Video"></a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -1714,6 +1719,7 @@
 			});
 		});
 	</script>
+	<script async src="html5gallery/html5gallery.js"></script>
 	<script async src="js/modalHelper.js"></script>
 	<script async src="js/contact_validation.js"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
